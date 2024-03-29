@@ -1,2 +1,15 @@
-# webpack-wxApp
-通过webpack对微信小程序开发代码进行，less转换wxss，js压缩,动态监听代码变化等基本功能。后续可以自己添加其他loader,plugin
+### 1、npm i 
+下载外层壳子依赖
+
+
+### 2、npm run build
+生成dist文件夹
+
+### 3、dist文件夹在微信开发者工具中打开
+
+### 4、微信开发者工具中
+npm i 下载dist文件夹中需要的依赖
+通过工具栏 构建npm
+编译
+
+后续代码开发在外层壳子中输入 可以自动更新 dist文件夹

@@ -1,0 +1,82 @@
+.conatiner {
+    height: 100%;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40rpx;
+
+    .logo-pic {
+      width: 120rpx;
+      height: 120rpx;
+      background-size: 100%;
+    }
+
+    span {
+      font-weight: bold;
+      color: #1782f6;
+      font-size: 52rpx;
+      margin-left: 16rpx;
+    }
+  }
+
+  .form-container {
+    margin-top: 80rpx;
+    padding: 0 80rpx;
+
+    .sub-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #999;
+      font-size: 28rpx;
+
+      :deep(.van-checkbox__label) {
+        color: #999;
+      }
+    }
+  }
+
+  .field-username,
+  .field-pwd {
+    border-bottom: 4rpx #e3e3e3 solid;
+    padding: 0 48rpx 0 48rpx;
+    border: 1px solid #ccc;
+    margin-bottom: 52rpx;
+    border-radius: 24rpx;
+  }
+
+  .van-field ::placeholder {
+    color: #999999;
+  }
+
+  .field-active {
+    border: 1px solid #1782f6;
+    background-color: #fff;
+
+    // 文字颜色
+    :deep(.van-field__control) {
+      color: #1782f6;
+    }
+  }
+
+  // field错误提示
+  .van-cell {
+    overflow: visible;
+  }
+
+  :deep(.van-field__error-message) {
+    position: absolute;
+    top: 40px;
+  }
+
+  .login-btn-container {
+    margin-top: 64rpx;
+    height: 88rpx;
+    width: 480rpx;
+    .login-btn {
+      font-size: 32rpx;
+    }
+  }

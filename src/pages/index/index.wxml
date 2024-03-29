@@ -1,0 +1,59 @@
+<!-- index.wxml -->
+<scroll-view class="scrollarea" scroll-y type="list">
+    <view class="container">
+        <!-- <change-lange></change-lange> -->
+        <view class="logo-container">
+            <image class="logo-pic" src="../../images/icon.ico" />
+            <text>CDE移动端</text>
+        </view>
+        <!-- 表单登录 -->
+        <van-field v-model="username" name="用户名" placeholder="请输入用户名" clearable class="field-username" :class="checkedField === 'user' ? 'field-active' : ''" bind:focus="checkedField = 'user'" bind:blur="checkedField = ''">
+            <!-- <template #left-icon>
+          <van-icon name="contact-o" :color="checkedField === 'user' ? '#1782f6' : '#bbbbbb'" />
+        </template> -->
+        </van-field>
+        <van-field v-model="password" :type="passwordType" name="密码" placeholder="请输入密码" clearable class="field-pwd" :class="checkedField === 'pwd' ? 'field-active' : ''" bind:click-right-icon="viewPassword" bind:focus="checkedField = 'pwd'" bind:blur="checkedField = ''">
+            <!-- <template #left-icon>
+          <van-icon name="lock" :color="checkedField === 'pwd' ? '#1782f6' : '#bbbbbb'" />
+        </template>
+        <template #right-icon> -->
+            <van-icon v-if="passwordType === 'password'" name="closed-eye" />
+            <van-icon v-else name="eye-o" />
+            <!-- <van-image
+            v-if="passwordType == 'password'"
+            class="suffix-icon"
+            width="20"
+            height="20"
+            :src="'bind:/assets/img/login/no-visible.png'"
+          />
+          <van-image
+            v-else
+            class="suffix-icon"
+            width="20"
+            height="20"
+            :src="'bind:/assets/img/login/visible.png'"
+          /> -->
+            <!-- <i class="van-icon van-icon-eye-o suffix-icon" v-if="passwordType == 'text'"></i>
+          <i class="van-icon van-icon-closed-eye suffix-icon" v-else></i> -->
+            <!-- </template> -->
+        </van-field>
+        <view class="sub-menu">
+            <van-checkbox v-model="loginConfig.rememberPassword" shape="square" checked-color="#1782f6" icon-size="14px">
+                记住密码
+                <!-- {{
+          $t('login.RememberPassword')
+        }} -->
+            </van-checkbox>
+            <!-- <text bind:click="forgetPassword">{{ $t('login.forgetPassword') }}</text> -->
+        </view>
+        <view class="login-btn-container">
+            <van-button block class="login-btn" type="primary" color="#1782f6" native-type="submit" bindtap="login" :>
+                登录
+                <!-- {{
+          $t('login.login')
+        }} -->
+            </van-button>
+        </view>
+    </view>
+    <van-toast id="van-toast" />
+</scroll-view>
